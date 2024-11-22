@@ -7,8 +7,10 @@ To write a verilog code for 4bit adder and verify the functionality using Test b
 
  Verify the Functionality using Test-bench.
 
+
 ## Tool Required: 
 Functional Simulation: nclaunch Simulator (nclaunch) 
+
 
 ## 4-bit Adder Design:
 To construct a 4-bit adder, need to chain together four 1-bit full adders. Each full adder computes the sum and carry for one bit of the two numbers. The carry-out from one adder feeds into the carry-in of the next adder in the sequence. This process adds the two 4-bit numbers bit by bit, with the carry propagating through each stage, resulting in a final sum and carry-out at the end.
@@ -21,9 +23,12 @@ Here’s the truth table for a 1-bit full adder:
 
 ![tt](https://github.com/user-attachments/assets/0b3ab24f-1d7e-4a01-80ce-5e7406f4082b)
 
+
 ### Fig 1 : Diagram and truth table of full adder
 
+
 ### Logic Expressions:
+
 
 1.	Sum (S):
    
@@ -37,9 +42,12 @@ COUT=(A&B) | (CIN&(A^B))
 
 ![image](https://github.com/user-attachments/assets/7d6fa554-2614-4f19-aa68-65c9e6153caa)
 
+
 ### Fig 2:Diagram of 4 Bit Adder
 
+
 ## Creating Source Codes 
+
 
 	In the Terminal, type gedit <filename>.v (ex: gedit 4bitadder.v). 
 
@@ -47,7 +55,9 @@ COUT=(A&B) | (CIN&(A^B))
 
 Note : File name should be with HDL Extension
 
+
 ### a) Verify the Functionality 
+
 
 	Three Codes shall be written for implementation of 4-bit Adder as follows, 
 
@@ -62,6 +72,7 @@ Developed by: Register Number*/
 
 ## Functional Simulation: 
 
+
 	Invoke the cadence environment by type the below commands 
 
 	tcsh (Invokes C-Shell) 
@@ -71,6 +82,7 @@ Developed by: Register Number*/
       (The path of cshrc could vary depending on the installation destination)
       
 	After this you can see the window like below 
+
 
 ### Fig 3:Invoke the Cadence Environment
 
@@ -151,6 +163,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 
 ## Step 2: Elaboration:– To check the port connections in hierarchical design 
+
 	Inputs: Top level design / test bench Verilog codes 
 
 	Outputs: Elaborate database updated in mapped library if successful, generates report else error reported in log file 
